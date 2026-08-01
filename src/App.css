@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+body {
+@apply bg-[#020204] text-zinc-200 antialiased overflow-x-hidden selection:bg-indigo-500/40 selection:text-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Outfit', sans-serif;
+}
+
+p, span, input, button, a {
+font-family: 'Plus Jakarta Sans', sans-serif;
+}
+}
+
+@layer utilities {
+/* Premium Custom Scrollbar */
+::-webkit-scrollbar {
+width: 6px;
+height: 6px;
+}
+::-webkit-scrollbar-track {
+background: transparent;
+}
+::-webkit-scrollbar-thumb {
+@apply bg-white/10 rounded-full hover:bg-indigo-500/50 transition-colors;
+}
+
+/* Hide Scrollbar for sleek sidebars */
+.scrollbar-hide::-webkit-scrollbar {
+display: none;
+}
+.scrollbar-hide {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+/* Shimmer Loading Animation */
+@keyframes shimmer {
+100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+animation: shimmer 1.5s infinite;
+}
+}
