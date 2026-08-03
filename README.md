@@ -46,10 +46,6 @@ The project combines modern UI design with AI-powered search to create a fast an
 - 💰 Pricing information
 - 🔗 Official website links
 - 🎨 Beautiful animated interface
-- 🌈 Interactive mesh gradient background
-- ⚡ Lightning-fast React + Vite architecture
-- ☁️ Supabase integration
-- 📱 Responsive design
 
 ---
 
@@ -83,27 +79,6 @@ The project combines modern UI design with AI-powered search to create a fast an
 
 ---
 
-# 📂 Project Structure
-
-```
-anakrino-engine
-│
-├── public/
-│
-├── src/
-│   ├── assets/
-│   ├── lib/
-│   │   ├── gemini.js
-│   │   └── supabase.js
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── package.json
-└── vite.config.js
-```
-
----
 
 # ⚙ Installation
 
@@ -133,19 +108,6 @@ npm run dev
 
 ---
 
-# 🔑 Environment Variables
-
-Create a `.env` file in the project root.
-
-```env
-VITE_GEMINI_API_KEY=your_gemini_api_key
-
-VITE_SUPABASE_URL=your_supabase_url
-
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
----
 
 # 🧠 How It Works
 
