@@ -49,20 +49,6 @@ The project combines modern UI design with AI-powered search to create a fast an
 
 ---
 
-# 🖼 Preview
-
-> Add screenshots here
-
-```
-/screenshots/home.png
-
-/screenshots/results.png
-
-/screenshots/mobile.png
-```
-
----
-
 # 🏗 Tech Stack
 
 | Technology | Purpose |
