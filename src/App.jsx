@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { 
   Search, Sparkles, ExternalLink, Check, 
-  X, AlertCircle, ArrowLeft, Star, Globe, 
+  X, AlertCircle, ArrowLeft, Star, 
   MessageSquare, Send, ChevronRight, Zap, 
   Layers, Scale, Trash2, ArrowRight, ThumbsUp, ThumbsDown, MessageCircle, User
 } from 'lucide-react';
@@ -362,7 +362,24 @@ export default function App() {
 
   const triggerToast = (msg) => { setToastMsg(msg); setTimeout(() => setToastMsg(null), 4000); };
   
-  const handleLogin = async () => { if (!supabase) return triggerToast("Unable to connect to Supabase."); await supabase.auth.signInWithOAuth({ provider: 'google' }); };
+  const handleLogin = async () => {
+    if (!supabase) return triggerToast("Supabase credentials missing. Please set up your .env file.");
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin
+        }
+      });
+      if (error) {
+        console.error("Sign-in error:", error);
+        triggerToast(error.message || "Unable to sign in with Google.");
+      }
+    } catch (err) {
+      console.error("Sign-in exception:", err);
+      triggerToast(err.message || "Failed to initiate sign-in.");
+    }
+  };
   const handleLogout = async () => { if (!supabase) return; await supabase.auth.signOut(); triggerToast("You have successfully signed out."); };
 
   // ==========================================
@@ -481,17 +498,26 @@ export default function App() {
       
       contents.push({ role: 'user', parts: [{ text: systemContext + userText }] });
 
-      const envApiKey = import.meta.env.VITE_GEMINI_API_KEY;
-      if(!envApiKey) throw new Error("Missing Gemini API Key");
-
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${envApiKey}`, {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents })
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents })
       });
-      if (!response.ok) throw new Error("API responded with error.");
+      if (!response.ok) {
+        let errText = "API responded with error.";
+        try {
+          const errData = await response.json();
+          if (errData?.error) errText = errData.error;
+        } catch (parseErr) {
+          void parseErr;
+        }
+        throw new Error(errText);
+      }
       const data = await response.json();
-      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I had trouble generating an answer.";
+      const reply = data.reply || "Sorry, I had trouble generating an answer.";
       setChatMessages(prev => [...prev, { role: 'model', text: reply }]);
     } catch (err) {
+      console.error("Chat request failed:", err);
       setChatMessages(prev => [...prev, { role: 'model', text: "I'm having trouble connecting. Please try again." }]);
     } finally {
       setChatLoading(false);
