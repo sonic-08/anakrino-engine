@@ -1,5 +1,4 @@
-import { User, Scale, LogOut } from 'lucide-react';
-import PrismIcon from './PrismIcon';
+import { User, Scale, LogOut, Compass } from 'lucide-react';
 import Button3D from './Button3D';
 
 export default function Navbar({
@@ -15,19 +14,14 @@ export default function Navbar({
       {/* Brand Logo */}
       <div
         onClick={onResetHome}
-        className="flex items-center gap-3.5 cursor-pointer group"
+        className="flex items-center gap-3 cursor-pointer group"
       >
-        <div className="w-10 h-10 bg-black/40 border border-white/10 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.1)] group-hover:border-indigo-500/40 group-hover:bg-indigo-500/10 transition-all duration-300">
-          <PrismIcon className="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform duration-300" />
+        <div className="w-10 h-10 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.08)] group-hover:border-indigo-500/40 group-hover:bg-indigo-500/20 transition-all duration-300">
+          <Compass className="w-5 h-5 text-indigo-400 group-hover:rotate-45 transition-transform duration-500" />
         </div>
-        <div className="flex flex-col">
-          <span className="font-heading text-xl font-bold tracking-tight text-white drop-shadow-sm flex items-center gap-2">
-            Anakrino
-            <span className="text-[0.65rem] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-              Engine
-            </span>
-          </span>
-        </div>
+        <span className="font-heading text-xl font-bold tracking-tight text-white drop-shadow-sm">
+          Anakrino
+        </span>
       </div>
 
       {/* Navigation Actions */}

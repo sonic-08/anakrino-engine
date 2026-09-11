@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, ChevronRight, Sparkles } from 'lucide-react';
-import PrismIcon from './PrismIcon';
+import { Search, ChevronRight, Sparkles, Compass } from 'lucide-react';
 import Button3D from './Button3D';
 
 const DISCOVERY_TAGS = [
@@ -35,7 +34,7 @@ export default function HeroSearch({
           transition={{ delay: 0.1, duration: 0.6, type: "spring" }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
-            <PrismIcon className="w-4 h-4" /> The Intelligent AI Directory
+            <Compass className="w-4 h-4 text-indigo-400" /> The Intelligent AI Directory
           </div>
         </motion.div>
 
@@ -47,7 +46,7 @@ export default function HeroSearch({
         </h1>
 
         <p className="text-zinc-400 text-base sm:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
-          Stop searching endlessly across generic lists. Describe what you want to build or automate, and our engine will construct the exact stack of tools you need.
+          Stop searching endlessly across generic lists. Describe what you want to build or automate, and our platform will construct the exact stack of tools you need.
         </p>
       </div>
 

@@ -1,4 +1,4 @@
-import { Zap, Star, ArrowRight, Scale, ThumbsUp, ThumbsDown, MessageCircle } from 'lucide-react';
+import { Compass, Star, ArrowRight, Scale, ThumbsUp, ThumbsDown, MessageCircle } from 'lucide-react';
 import Card3D from './Card3D';
 
 export default function ToolCard({
@@ -61,7 +61,7 @@ export default function ToolCard({
       {/* SECTION 1: "Why For You" Hero Highlight */}
       <div className="w-full bg-indigo-500/[0.08] border border-indigo-500/20 p-5 sm:p-6 rounded-2xl mb-6 flex flex-col justify-center relative overflow-hidden group-hover:bg-indigo-500/[0.14] group-hover:border-indigo-500/30 transition-colors shrink-0">
         <div className="flex items-center gap-2 mb-2">
-          <Zap className="w-4 h-4 text-indigo-400" />
+          <Compass className="w-4 h-4 text-indigo-400" />
           <h4 className="text-[0.7rem] font-extrabold text-indigo-400 uppercase tracking-widest">
             Why For You
           </h4>

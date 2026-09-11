@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Check, X, Zap, Star, ExternalLink, Scale, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Check, X, Compass, Star, ExternalLink, Scale, ShieldCheck, Sliders } from 'lucide-react';
 import Button3D from './Button3D';
 
 function getSafeUrl(url) {
@@ -78,7 +78,7 @@ export default function ToolDetailView({
               {/* Why For You Block */}
               <div className="bg-indigo-500/[0.09] border-l-4 border-indigo-500 p-6 rounded-r-2xl shadow-inner">
                 <h4 className="text-xs font-black text-indigo-400 uppercase tracking-widest mb-2 flex items-center gap-2">
-                  <Zap className="w-4 h-4" /> Why For You
+                  <Compass className="w-4 h-4" /> Why For You
                 </h4>
                 <p className="text-zinc-200 text-base sm:text-lg leading-relaxed font-medium">
                   {tool.why_for_you || tool.description}
@@ -133,7 +133,7 @@ export default function ToolDetailView({
         <div className="space-y-6 lg:sticky lg:top-32">
           <div className="bg-[#0a0a12]/80 border border-white/10 rounded-[2.5rem] p-8 backdrop-blur-3xl shadow-2xl">
             <h3 className="font-heading text-xl font-bold text-white border-b border-white/10 pb-5 mb-6 flex items-center gap-2.5">
-              <Zap className="w-5 h-5 text-indigo-400" /> Key Specs
+              <Sliders className="w-5 h-5 text-indigo-400" /> Key Specs
             </h3>
 
             <div className="space-y-4 mb-8">

@@ -67,7 +67,7 @@ export default function App() {
   const [chatMessages, setChatMessages] = useState([
     {
       role: 'model',
-      text: "Welcome to **Anakrino Engine**! Describe a project or problem, and I'll find or compare the best AI platforms for you."
+      text: "Welcome to **Anakrino**! Describe a project or problem, and I'll find or compare the best AI platforms for you."
     }
   ]);
 

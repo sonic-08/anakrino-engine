@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, X, Send, RotateCcw, Bot } from 'lucide-react';
+import { Sparkles, X, Send, RotateCcw, MessageSquare, Compass } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -58,7 +58,7 @@ export default function CopilotDrawer({
         }`}
         title={isOpen ? "Close Copilot" : "Open Anakrino Copilot"}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Sparkles className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
       </motion.button>
 
       {/* Floating Chat Panel */}
@@ -75,7 +75,7 @@ export default function CopilotDrawer({
             <div className="p-5 border-b border-white/5 bg-white/[0.02] flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)]">
-                  <Bot className="w-5 h-5 text-white" />
+                  <Compass className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <span className="font-heading text-base font-bold text-white block tracking-tight">
