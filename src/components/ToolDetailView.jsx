@@ -50,7 +50,7 @@ export default function ToolDetailView({
         <div className="lg:col-span-2 space-y-8">
           {/* Main Hero Card */}
           <div className="bg-[#0a0a12]/80 border border-white/10 rounded-[2.5rem] p-8 sm:p-12 backdrop-blur-3xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 blur-[100px] pointer-events-none rounded-full translate-x-1/4 -translate-y-1/4" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 blur-[100px] pointer-events-none rounded-full translate-x-1/4 -translate-y-1/4" />
 
             <div className="relative z-10">
               <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -71,13 +71,13 @@ export default function ToolDetailView({
                 {tool.name}
               </h1>
 
-              <p className="text-lg sm:text-xl text-indigo-200/90 font-medium mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-emerald-200/90 font-medium mb-8 leading-relaxed">
                 {tool.tagline}
               </p>
 
               {/* Why For You Block */}
-              <div className="bg-indigo-500/[0.09] border-l-4 border-indigo-500 p-6 rounded-r-2xl shadow-inner">
-                <h4 className="text-xs font-black text-indigo-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+              <div className="bg-emerald-500/[0.09] border-l-4 border-emerald-500 p-6 rounded-r-2xl shadow-inner">
+                <h4 className="text-xs font-black text-emerald-400 uppercase tracking-widest mb-2 flex items-center gap-2">
                   <Compass className="w-4 h-4" /> Why For You
                 </h4>
                 <p className="text-zinc-200 text-base sm:text-lg leading-relaxed font-medium">
@@ -133,7 +133,7 @@ export default function ToolDetailView({
         <div className="space-y-6 lg:sticky lg:top-32">
           <div className="bg-[#0a0a12]/80 border border-white/10 rounded-[2.5rem] p-8 backdrop-blur-3xl shadow-2xl">
             <h3 className="font-heading text-xl font-bold text-white border-b border-white/10 pb-5 mb-6 flex items-center gap-2.5">
-              <Sliders className="w-5 h-5 text-indigo-400" /> Key Specs
+              <Sliders className="w-5 h-5 text-emerald-400" /> Key Specs
             </h3>
 
             <div className="space-y-4 mb-8">
@@ -171,7 +171,7 @@ export default function ToolDetailView({
               onClick={(e) => onToggleCompare(tool, e)}
               className={`w-full py-3.5 rounded-2xl font-bold text-xs tracking-wide transition-all border flex items-center justify-center gap-2 cursor-pointer ${
                 isInCompare
-                  ? 'bg-indigo-600/20 border-indigo-500/50 text-indigo-300'
+                  ? 'bg-emerald-600/20 border-emerald-500/50 text-emerald-300'
                   : 'bg-transparent border-white/15 text-zinc-300 hover:bg-white/5 hover:border-white/25'
               }`}
             >

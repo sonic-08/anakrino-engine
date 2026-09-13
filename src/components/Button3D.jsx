@@ -13,7 +13,7 @@ export default function Button3D({
 
   let variantStyle = "";
   if (variant === "primary") {
-    variantStyle = "bg-indigo-600 text-white shadow-[0_6px_0_#3730a3,0_12px_20px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.35)] hover:bg-indigo-500 hover:shadow-[0_4px_0_#3730a3,0_8px_15px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.4)] active:shadow-[0_0px_0_#3730a3,0_0px_0px_rgba(0,0,0,0.5),inset_0_3px_6px_rgba(0,0,0,0.4)]";
+    variantStyle = "bg-emerald-600 text-white shadow-[0_6px_0_#065f46,0_12px_20px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.35)] hover:bg-emerald-500 hover:shadow-[0_4px_0_#065f46,0_8px_15px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.4)] active:shadow-[0_0px_0_#065f46,0_0px_0px_rgba(0,0,0,0.5),inset_0_3px_6px_rgba(0,0,0,0.4)]";
   } else if (variant === "glass") {
     variantStyle = "bg-white/[0.06] backdrop-blur-xl border border-white/10 text-zinc-200 shadow-[0_6px_0_rgba(0,0,0,0.4),0_12px_20px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.12)] hover:bg-white/[0.12] hover:text-white hover:border-white/20 hover:shadow-[0_4px_0_rgba(0,0,0,0.4),0_8px_15px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.2)] active:shadow-[0_0px_0_rgba(0,0,0,0.4),0_0px_0px_rgba(0,0,0,0.4),inset_0_3px_6px_rgba(0,0,0,0.3)]";
   } else if (variant === "white") {

@@ -16,8 +16,8 @@ export default function Navbar({
         onClick={onResetHome}
         className="flex items-center gap-3 cursor-pointer group"
       >
-        <div className="w-10 h-10 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.08)] group-hover:border-indigo-500/40 group-hover:bg-indigo-500/20 transition-all duration-300">
-          <Compass className="w-5 h-5 text-indigo-400 group-hover:rotate-45 transition-transform duration-500" />
+        <div className="w-10 h-10 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.08)] group-hover:border-emerald-500/40 group-hover:bg-emerald-500/20 transition-all duration-300">
+          <Compass className="w-5 h-5 text-emerald-400 group-hover:rotate-45 transition-transform duration-500" />
         </div>
         <span className="font-heading text-xl font-bold tracking-tight text-white drop-shadow-sm">
           Anakrino
@@ -30,10 +30,10 @@ export default function Navbar({
         {compareCount > 0 && (
           <button
             onClick={onOpenCompare}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 text-indigo-300 hover:bg-indigo-600/30 transition-all cursor-pointer text-xs font-bold"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600/30 transition-all cursor-pointer text-xs font-bold"
             title="Open Comparison Matrix"
           >
-            <Scale className="w-4 h-4 text-indigo-400" />
+            <Scale className="w-4 h-4 text-emerald-400" />
             <span>Compare ({compareCount}/3)</span>
           </button>
         )}
@@ -42,7 +42,7 @@ export default function Navbar({
         {user ? (
           <div className="flex items-center gap-3 bg-black/50 p-1.5 pl-4 rounded-2xl border border-white/10 shadow-[inset_0_2px_8px_rgba(0,0,0,0.5)]">
             <span className="text-xs sm:text-sm font-bold text-zinc-200 tracking-wide flex items-center gap-2">
-              <User className="w-4 h-4 text-indigo-400" />
+              <User className="w-4 h-4 text-emerald-400" />
               <span className="max-w-[120px] sm:max-w-[180px] truncate">
                 {user.user_metadata?.full_name || user.email || 'User'}
               </span>

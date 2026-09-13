@@ -326,7 +326,7 @@ export default function App() {
     });
 
   return (
-    <div className="font-body min-h-screen bg-[#020204] text-zinc-200 overflow-x-hidden pb-32 relative selection:bg-indigo-500/40 selection:text-white">
+    <div className="font-body min-h-screen bg-[#010a05] text-zinc-200 overflow-x-hidden pb-32 relative selection:bg-emerald-500/30 selection:text-emerald-100">
       {/* Dynamic Animated Mesh Canvas */}
       <InteractiveMeshBackground theme={appTheme} />
 
@@ -372,8 +372,8 @@ export default function App() {
               <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8">
                 {/* Search Input */}
                 <form onSubmit={handleFormSearch} className="max-w-2xl w-full relative">
-                  <div className="relative flex items-center bg-white/[0.04] border border-white/10 rounded-2xl p-1.5 shadow-[0_20px_40px_rgba(0,0,0,0.4)] backdrop-blur-2xl focus-within:border-indigo-500/40 transition-all duration-300">
-                    <Search className="w-5 h-5 text-zinc-500 ml-4 shrink-0 group-focus-within:text-indigo-400" />
+                  <div className="relative flex items-center bg-white/[0.04] border border-white/10 rounded-2xl p-1.5 shadow-[0_20px_40px_rgba(0,0,0,0.4)] backdrop-blur-2xl focus-within:border-emerald-500/40 transition-all duration-300">
+                    <Search className="w-5 h-5 text-zinc-500 ml-4 shrink-0 group-focus-within:text-emerald-400" />
                     <input
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
@@ -394,7 +394,7 @@ export default function App() {
                 <div className="flex flex-wrap items-center gap-2.5">
                   <div className="flex items-center gap-1 bg-white/[0.03] border border-white/10 p-1 rounded-2xl backdrop-blur-xl">
                     <div className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-zinc-400">
-                      <Filter className="w-3.5 h-3.5 text-indigo-400" />
+                      <Filter className="w-3.5 h-3.5 text-emerald-400" />
                       <span className="hidden sm:inline">Pricing:</span>
                     </div>
                     {['all', 'free', 'paid'].map((filterVal) => (
@@ -403,7 +403,7 @@ export default function App() {
                         onClick={() => setPricingFilter(filterVal)}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold capitalize transition-all cursor-pointer ${
                           pricingFilter === filterVal
-                            ? 'bg-indigo-600 text-white shadow-sm'
+                            ? 'bg-emerald-600 text-white shadow-sm'
                             : 'text-zinc-400 hover:text-white'
                         }`}
                       >
@@ -414,7 +414,7 @@ export default function App() {
 
                   <div className="flex items-center gap-1 bg-white/[0.03] border border-white/10 p-1 rounded-2xl backdrop-blur-xl">
                     <div className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-zinc-400">
-                      <ArrowUpDown className="w-3.5 h-3.5 text-indigo-400" />
+                      <ArrowUpDown className="w-3.5 h-3.5 text-emerald-400" />
                       <span className="hidden sm:inline">Sort:</span>
                     </div>
                     {[
@@ -426,7 +426,7 @@ export default function App() {
                         onClick={() => setSortBy(sortOption.key)}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                           sortBy === sortOption.key
-                            ? 'bg-indigo-600 text-white shadow-sm'
+                            ? 'bg-emerald-600 text-white shadow-sm'
                             : 'text-zinc-400 hover:text-white'
                         }`}
                       >
@@ -441,8 +441,8 @@ export default function App() {
               {!loading && tools.length > 0 && (
                 <div className="flex items-center justify-between border-b border-white/[0.06] pb-6 mb-8">
                   <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
-                    <div className="p-2.5 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl">
-                      <Layers className="text-indigo-400 w-6 h-6" />
+                    <div className="p-2.5 bg-emerald-500/20 border border-emerald-500/30 rounded-2xl">
+                      <Layers className="text-emerald-400 w-6 h-6" />
                     </div>
                     <span>Recommended AI Stack</span>
                     <span className="text-xs font-extrabold uppercase tracking-widest text-zinc-400 px-3 py-1 bg-white/5 border border-white/10 rounded-full">
@@ -535,7 +535,7 @@ export default function App() {
             className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black/85 border border-white/10 rounded-2xl px-6 py-3.5 backdrop-blur-3xl shadow-[0_25px_50px_rgba(0,0,0,0.8)] z-[140] flex items-center gap-6"
           >
             <div className="flex items-center gap-2.5">
-              <Scale className="w-5 h-5 text-indigo-400" />
+              <Scale className="w-5 h-5 text-emerald-400" />
               <span className="font-bold text-xs sm:text-sm text-white tracking-wide">
                 Comparing {compareList.length} / 3 tools
               </span>
@@ -549,7 +549,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => setViewState('compare')}
-                className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
               >
                 View Matrix
               </button>

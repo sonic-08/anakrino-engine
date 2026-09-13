@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
 
 const THEMES = {
-  default: { c1: [79, 70, 229], c2: [168, 85, 247], c3: [14, 165, 233] }, // Indigo, Purple, Cyan
-  coding: { c1: [16, 185, 129], c2: [20, 184, 166], c3: [6, 182, 212] },  // Emerald, Teal, Cyan
-  design: { c1: [217, 70, 239], c2: [249, 115, 22], c3: [139, 92, 246] }, // Fuchsia, Orange, Violet
-  video: { c1: [239, 68, 68], c2: [245, 158, 11], c3: [244, 63, 94] }     // Red, Amber, Rose
+  default: { c1: [16, 185, 129], c2: [52, 211, 153], c3: [45, 212, 191] },  // Emerald, Mint, Jade Teal
+  coding: { c1: [5, 150, 105], c2: [16, 185, 129], c3: [110, 231, 183] },   // Forest Emerald, Emerald, Light Mint
+  design: { c1: [16, 185, 129], c2: [132, 204, 22], c3: [45, 212, 191] },   // Emerald, Spring Lime, Jade Teal
+  video: { c1: [4, 120, 87], c2: [16, 185, 129], c3: [167, 243, 208] }      // Deep Pine, Emerald, Frosted Mint
 };
 
 export default function InteractiveMeshBackground({ theme = 'default' }) {
@@ -23,8 +23,8 @@ export default function InteractiveMeshBackground({ theme = 'default' }) {
     const colors = THEMES[theme] || THEMES.default;
 
     const bgGradient = ctx.createLinearGradient(0, 0, 0, height);
-    bgGradient.addColorStop(0, '#020204');
-    bgGradient.addColorStop(1, '#080812');
+    bgGradient.addColorStop(0, '#010a05');
+    bgGradient.addColorStop(1, '#04160c');
 
     let time = 0;
     const render = () => {

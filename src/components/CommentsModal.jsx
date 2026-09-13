@@ -33,7 +33,7 @@ export default function CommentsModal({ tool, onClose, user, onAddComment }) {
         <div className="p-6 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
           <div>
             <h3 className="text-xl font-bold text-white font-heading flex items-center gap-2">
-              <MessageCircle className="w-5 h-5 text-indigo-400" /> Community Discussion
+              <MessageCircle className="w-5 h-5 text-emerald-400" /> Community Discussion
             </h3>
             <p className="text-xs text-zinc-400 mt-0.5">{tool.name}</p>
           </div>
@@ -58,12 +58,12 @@ export default function CommentsModal({ tool, onClose, user, onAddComment }) {
           ) : (
             comments.map((c, i) => (
               <div key={i} className="flex gap-3 items-start">
-                <div className="w-9 h-9 rounded-full bg-indigo-500/20 flex items-center justify-center shrink-0 border border-indigo-500/30 text-indigo-400">
+                <div className="w-9 h-9 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 border border-emerald-500/30 text-emerald-400">
                   <User className="w-4 h-4" />
                 </div>
                 <div className="bg-white/[0.04] rounded-2xl rounded-tl-none p-4 text-xs sm:text-sm text-zinc-200 leading-relaxed border border-white/5 flex-grow">
                   <div className="flex justify-between items-center mb-1">
-                    <span className="font-bold text-indigo-300 text-xs">{c.author || 'Member'}</span>
+                    <span className="font-bold text-emerald-300 text-xs">{c.author || 'Member'}</span>
                     {c.date && (
                       <span className="text-[0.65rem] text-zinc-500">
                         {new Date(c.date).toLocaleDateString()}
@@ -85,12 +85,12 @@ export default function CommentsModal({ tool, onClose, user, onAddComment }) {
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
                 placeholder="Share your thoughts on this AI tool..."
-                className="flex-grow bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-zinc-500 focus:border-indigo-500 outline-none transition-colors"
+                className="flex-grow bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-zinc-500 focus:border-emerald-500 outline-none transition-colors"
               />
               <button
                 type="submit"
                 disabled={!commentText.trim()}
-                className="bg-indigo-600 text-white px-5 rounded-xl font-bold text-xs sm:text-sm hover:bg-indigo-500 disabled:opacity-50 transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="bg-emerald-600 text-white px-5 rounded-xl font-bold text-xs sm:text-sm hover:bg-emerald-500 disabled:opacity-50 transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <span>Post</span>
                 <Send className="w-3.5 h-3.5" />

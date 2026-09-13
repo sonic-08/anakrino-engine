@@ -21,8 +21,8 @@ export default function ComparisonMatrix({ tools, onBack, onRemove }) {
         </Button3D>
 
         <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-indigo-600/20 border border-indigo-500/30">
-            <Scale className="w-6 h-6 text-indigo-400" />
+          <div className="p-2.5 rounded-2xl bg-emerald-600/20 border border-emerald-500/30">
+            <Scale className="w-6 h-6 text-emerald-400" />
           </div>
           Comparison Matrix ({tools.length}/3)
         </h2>
@@ -113,7 +113,7 @@ export default function ComparisonMatrix({ tools, onBack, onRemove }) {
           {/* Empty Add Slot */}
           {tools.length < 3 && (
             <div className="w-[360px] sm:w-[390px] shrink-0 border-2 border-dashed border-white/10 rounded-[2.5rem] flex flex-col items-center justify-center text-zinc-500 p-8 text-center bg-white/[0.01]">
-              <Scale className="w-10 h-10 mb-3 opacity-40 text-indigo-400" />
+              <Scale className="w-10 h-10 mb-3 opacity-40 text-emerald-400" />
               <p className="font-bold text-zinc-300 text-sm mb-1">Add another tool</p>
               <p className="text-xs text-zinc-500 max-w-[220px]">
                 Click the scale balance icon on any tool card in results to compare up to 3 tools.

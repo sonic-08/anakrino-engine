@@ -31,7 +31,7 @@ export default function Card3D({ children, className = "", onClick }) {
     >
       <div
         style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}
-        className="w-full rounded-[2rem] bg-[#0a0a12]/80 backdrop-blur-2xl border border-white/[0.08] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.06)] overflow-hidden group transition-all duration-300 hover:bg-[#0e0e1a]/90 hover:border-indigo-500/30 relative flex flex-col h-full"
+        className="w-full rounded-[2rem] bg-[#0a0a12]/80 backdrop-blur-2xl border border-white/[0.08] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.06)] overflow-hidden group transition-all duration-300 hover:bg-[#0c140f]/90 hover:border-emerald-500/30 relative flex flex-col h-full"
       >
         {/* Border beam spotlight glare */}
         <motion.div
@@ -40,7 +40,7 @@ export default function Card3D({ children, className = "", onClick }) {
             background: useTransform(
               [mouseXSpring, mouseYSpring],
               ([mx, my]) =>
-                `radial-gradient(450px circle at ${(mx + 0.5) * 100}% ${(my + 0.5) * 100}%, rgba(99, 102, 241, 0.7), transparent 60%)`
+                `radial-gradient(450px circle at ${(mx + 0.5) * 100}% ${(my + 0.5) * 100}%, rgba(16, 185, 129, 0.7), transparent 60%)`
             ),
             border: '2px solid transparent',
             WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
@@ -56,7 +56,7 @@ export default function Card3D({ children, className = "", onClick }) {
             background: useTransform(
               [mouseXSpring, mouseYSpring],
               ([mx, my]) =>
-                `radial-gradient(600px circle at ${(mx + 0.5) * 100}% ${(my + 0.5) * 100}%, rgba(99, 102, 241, 0.08), transparent 50%)`
+                `radial-gradient(600px circle at ${(mx + 0.5) * 100}% ${(my + 0.5) * 100}%, rgba(16, 185, 129, 0.08), transparent 50%)`
             ),
           }}
         />

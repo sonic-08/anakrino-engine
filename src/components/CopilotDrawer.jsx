@@ -53,8 +53,8 @@ export default function CopilotDrawer({
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
         onClick={onToggle}
-        className={`fixed bottom-8 right-6 sm:right-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-[0_10px_35px_rgba(79,70,229,0.4)] z-[150] transition-colors duration-300 cursor-pointer ${
-          isOpen ? 'bg-white text-black border border-white/20' : 'bg-indigo-600 text-white'
+        className={`fixed bottom-8 right-6 sm:right-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-[0_10px_35px_rgba(16,185,129,0.4)] z-[150] transition-colors duration-300 cursor-pointer ${
+          isOpen ? 'bg-white text-black border border-white/20' : 'bg-emerald-600 text-white hover:bg-emerald-500'
         }`}
         title={isOpen ? "Close Copilot" : "Open Anakrino Copilot"}
       >
@@ -69,12 +69,12 @@ export default function CopilotDrawer({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 25, scale: 0.92, filter: 'blur(6px)' }}
             transition={{ type: "spring", stiffness: 280, damping: 26 }}
-            className="fixed bottom-26 sm:bottom-28 right-4 sm:right-10 w-[calc(100vw-2rem)] sm:w-[440px] bg-[#0a0a12]/95 border border-white/10 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.85)] backdrop-blur-3xl z-[150] overflow-hidden flex flex-col h-[580px] max-h-[75vh]"
+            className="fixed bottom-26 sm:bottom-28 right-4 sm:right-10 w-[calc(100vw-2rem)] sm:w-[440px] bg-[#07130b]/95 border border-white/10 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.85)] backdrop-blur-3xl z-[150] overflow-hidden flex flex-col h-[580px] max-h-[75vh]"
           >
             {/* Header */}
             <div className="p-5 border-b border-white/5 bg-white/[0.02] flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)]">
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)]">
                   <Compass className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -116,14 +116,14 @@ export default function CopilotDrawer({
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   {msg.role === 'model' && (
-                    <div className="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mr-2 mt-1 shrink-0">
-                      <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                    <div className="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center mr-2 mt-1 shrink-0">
+                      <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                     </div>
                   )}
                   <div
                     className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed font-medium ${
                       msg.role === 'user'
-                        ? 'bg-indigo-600 text-white shadow-md rounded-br-sm'
+                        ? 'bg-emerald-600 text-white shadow-md rounded-br-sm'
                         : 'bg-white/[0.05] border border-white/10 text-zinc-200 rounded-bl-sm prose prose-invert prose-xs max-w-none'
                     }`}
                   >
@@ -136,12 +136,12 @@ export default function CopilotDrawer({
                           ol: ({ children }) => <ol className="list-decimal pl-4 mb-2 space-y-1">{children}</ol>,
                           li: ({ children }) => <li className="text-zinc-300">{children}</li>,
                           code: ({ children }) => (
-                            <code className="bg-black/40 text-indigo-300 px-1.5 py-0.5 rounded text-[0.75rem] font-mono">
+                            <code className="bg-black/40 text-emerald-300 px-1.5 py-0.5 rounded text-[0.75rem] font-mono">
                               {children}
                             </code>
                           ),
                           a: ({ href, children }) => (
-                            <a href={href} target="_blank" rel="noopener noreferrer" className="text-indigo-400 underline hover:text-indigo-300">
+                            <a href={href} target="_blank" rel="noopener noreferrer" className="text-emerald-400 underline hover:text-emerald-300">
                               {children}
                             </a>
                           )
@@ -167,7 +167,7 @@ export default function CopilotDrawer({
                       <button
                         key={i}
                         onClick={() => handlePromptClick(prompt)}
-                        className="text-left text-xs bg-white/[0.04] hover:bg-indigo-600/20 hover:border-indigo-500/40 text-zinc-300 hover:text-white px-3 py-1.5 rounded-xl border border-white/5 transition-all cursor-pointer"
+                        className="text-left text-xs bg-white/[0.04] hover:bg-emerald-600/20 hover:border-emerald-500/40 text-zinc-300 hover:text-white px-3 py-1.5 rounded-xl border border-white/5 transition-all cursor-pointer"
                       >
                         {prompt}
                       </button>
@@ -182,25 +182,25 @@ export default function CopilotDrawer({
                   animate={{ opacity: 1 }}
                   className="flex justify-start items-center gap-2"
                 >
-                  <div className="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                  <div className="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                   </div>
                   <div className="bg-white/[0.05] border border-white/10 rounded-2xl rounded-bl-sm px-4 py-3 text-xs text-zinc-400 flex items-center gap-2">
                     <span className="flex gap-1">
                       <motion.span
                         animate={{ y: [0, -3, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, delay: 0 }}
-                        className="w-1.5 h-1.5 bg-indigo-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       />
                       <motion.span
                         animate={{ y: [0, -3, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }}
-                        className="w-1.5 h-1.5 bg-indigo-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       />
                       <motion.span
                         animate={{ y: [0, -3, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }}
-                        className="w-1.5 h-1.5 bg-indigo-400 rounded-full"
+                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
                       />
                     </span>
                     <span className="text-[0.75rem] font-medium text-zinc-400">Researching AI catalog...</span>
@@ -218,7 +218,7 @@ export default function CopilotDrawer({
               <input
                 ref={inputRef}
                 placeholder="Ask about AI platforms, comparisons..."
-                className="flex-grow bg-white/5 border border-white/10 rounded-xl text-xs sm:text-sm text-white px-4 py-3 outline-none focus:border-indigo-500/50 transition-colors font-medium placeholder-zinc-500"
+                className="flex-grow bg-white/5 border border-white/10 rounded-xl text-xs sm:text-sm text-white px-4 py-3 outline-none focus:border-emerald-500/50 transition-colors font-medium placeholder-zinc-500"
               />
               <button
                 type="submit"
