@@ -26,14 +26,26 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid contents array provided.' });
   }
 
-  try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    const result = await model.generateContent({ contents });
-    const reply = result?.response?.text() || "Sorry, I had trouble generating an answer.";
-    return res.status(200).json({ reply });
-  } catch (error) {
-    console.error("Chat generation failed:", error);
-    return res.status(502).json({ error: error.message || "Failed to generate chat response." });
+  const fallbackModels = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash"
+  ];
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+
+  for (let i = 0; i < fallbackModels.length; i++) {
+    const currentModelName = fallbackModels[i];
+    try {
+      const model = genAI.getGenerativeModel({ model: currentModelName });
+      const result = await model.generateContent({ contents });
+      const reply = result?.response?.text() || "Sorry, I had trouble generating an answer.";
+      return res.status(200).json({ reply });
+    } catch (error) {
+      console.warn(`Chat inference failed on ${currentModelName}:`, error.message);
+      if (i === fallbackModels.length - 1) {
+        return res.status(502).json({ error: error.message || "Failed to generate chat response." });
+      }
+    }
   }
 }

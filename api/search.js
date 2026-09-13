@@ -70,7 +70,9 @@ export default async function handler(req, res) {
       let textResponse = result.response.text();
       textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
 
-      const toolData = JSON.parse(textResponse);
+      const jsonMatch = textResponse.match(/\[\s*\{[\s\S]*\}\s*\]/);
+      const jsonStr = jsonMatch ? jsonMatch[0] : textResponse;
+      const toolData = JSON.parse(jsonStr);
       return res.status(200).json(toolData);
     } catch (error) {
       console.warn(`Search inference failed on ${currentModelName}:`, error.message);

@@ -1,4 +1,4 @@
-import { User, Scale, LogOut, Compass } from 'lucide-react';
+import { User, Scale, LogOut } from 'lucide-react';
 import Button3D from './Button3D';
 
 export default function Navbar({
@@ -16,10 +16,12 @@ export default function Navbar({
         onClick={onResetHome}
         className="flex items-center gap-3 cursor-pointer group"
       >
-        <div className="w-10 h-10 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.08)] group-hover:border-emerald-500/40 group-hover:bg-emerald-500/20 transition-all duration-300">
-          <Compass className="w-5 h-5 text-emerald-400 group-hover:rotate-45 transition-transform duration-500" />
-        </div>
-        <span className="font-heading text-xl font-bold tracking-tight text-white drop-shadow-sm">
+        <img
+          src="/logo.png"
+          alt="Anakrino Logo"
+          className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_12px_rgba(16,185,129,0.5)] select-none"
+        />
+        <span className="font-heading text-xl font-bold tracking-tight text-white drop-shadow-sm group-hover:text-emerald-300 transition-colors">
           Anakrino
         </span>
       </div>

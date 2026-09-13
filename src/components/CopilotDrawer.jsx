@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, X, Send, RotateCcw, MessageSquare, Compass } from 'lucide-react';
+import { Sparkles, X, Send, RotateCcw, MessageSquare } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -74,9 +74,11 @@ export default function CopilotDrawer({
             {/* Header */}
             <div className="p-5 border-b border-white/5 bg-white/[0.02] flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)]">
-                  <Compass className="w-5 h-5 text-white" />
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Anakrino"
+                  className="h-8 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(16,185,129,0.6)] shrink-0 select-none"
+                />
                 <div>
                   <span className="font-heading text-base font-bold text-white block tracking-tight">
                     Anakrino Copilot

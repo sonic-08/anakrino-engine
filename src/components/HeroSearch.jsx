@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, ChevronRight, Sparkles, Compass } from 'lucide-react';
+import { Search, ChevronRight, Sparkles } from 'lucide-react';
 import Button3D from './Button3D';
 
 const DISCOVERY_TAGS = [
@@ -33,8 +33,9 @@ export default function HeroSearch({
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1, duration: 0.6, type: "spring" }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
-            <Compass className="w-4 h-4 text-emerald-400" /> The Intelligent AI Directory
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
+            <img src="/logo.png" alt="Anakrino" className="h-4 sm:h-4.5 w-auto object-contain filter drop-shadow-[0_0_6px_rgba(16,185,129,0.8)] select-none" />
+            <span>The Intelligent AI Directory</span>
           </div>
         </motion.div>
 
