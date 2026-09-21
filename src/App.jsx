@@ -121,8 +121,8 @@ export default function App() {
       return {
         ...prev,
         [url]: {
-          likes: Math.floor(Math.random() * 45) + 12,
-          dislikes: Math.floor(Math.random() * 3),
+          likes: 0,
+          dislikes: 0,
           userAction: null,
           comments: []
         }
@@ -139,7 +139,7 @@ export default function App() {
     initInteractionState(tool.url);
 
     setInteractions((prev) => {
-      const current = prev[tool.url] || { likes: 10, dislikes: 0, userAction: null, comments: [] };
+      const current = prev[tool.url] || { likes: 0, dislikes: 0, userAction: null, comments: [] };
       let newLikes = current.likes;
       let newDislikes = current.dislikes;
       let newUserAction = actionType;
@@ -464,7 +464,7 @@ export default function App() {
                   </div>
 
                   <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                    {[...Array(6)].map((_, i) => (
+                    {[...Array(9)].map((_, i) => (
                       <SkeletonCard key={i} />
                     ))}
                   </div>

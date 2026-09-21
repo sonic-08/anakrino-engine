@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     You are the core engine for 'Anakrino', a premium directory of AI tools.
     The user is searching for: "${query}"
     
-    Search the live web and find the top 4 to 6 AI platforms that best fit this request.
+    Search the live web and find the top 8 to 12 AI platforms that best fit this request.
     Use a natural, helpful, and expert tone—like a professional tech reviewer explaining it to a friend.
     
     You MUST respond ONLY with a valid JSON array of objects. Do not include any markdown wrappers like \`\`\`json.
