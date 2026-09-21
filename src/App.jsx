@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, Sparkles, Scale, Filter, 
+  Search, BadgeCheck, Scale, Filter, 
   ArrowUpDown, RefreshCw 
 } from 'lucide-react';
 
@@ -443,7 +443,7 @@ export default function App() {
                 <div className="flex items-center justify-between border-b border-white/[0.06] pb-6 mb-8">
                   <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
                     <div className="p-2.5 bg-emerald-500/20 border border-emerald-500/30 rounded-2xl">
-                      <Sparkles className="text-emerald-400 w-6 h-6" />
+                      <BadgeCheck className="text-emerald-400 w-6 h-6" />
                     </div>
                     <span>Recommended AI Stack</span>
                     <span className="text-xs font-extrabold uppercase tracking-widest text-zinc-400 px-3 py-1 bg-white/5 border border-white/10 rounded-full">

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Check, X, Sparkles, Star, ExternalLink, Scale, ShieldCheck, Sliders } from 'lucide-react';
+import { ArrowLeft, Check, X, Target, Star, ExternalLink, Scale, ShieldCheck, Sliders } from 'lucide-react';
 import Button3D from './Button3D';
 
 function getSafeUrl(url) {
@@ -78,7 +78,7 @@ export default function ToolDetailView({
               {/* Why For You Block */}
               <div className="bg-emerald-500/[0.09] border-l-4 border-emerald-500 p-6 rounded-r-2xl shadow-inner">
                 <h4 className="text-xs font-black text-emerald-400 uppercase tracking-widest mb-2 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4" /> Why For You
+                  <Target className="w-4 h-4" /> Why For You
                 </h4>
                 <p className="text-zinc-200 text-base sm:text-lg leading-relaxed font-medium">
                   {tool.why_for_you || tool.description}
