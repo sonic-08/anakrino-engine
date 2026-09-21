@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Search, ChevronRight } from 'lucide-react';
-import { ThinkingOrb } from 'thinking-orbs';
 import Button3D from './Button3D';
 
 const DISCOVERY_TAGS = [
@@ -37,8 +36,6 @@ export default function HeroSearch({
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
             <img src="/logo.png" alt="Anakrino" className="h-4 sm:h-4.5 w-auto object-contain filter drop-shadow-[0_0_6px_rgba(16,185,129,0.8)] select-none" />
             <span>The Intelligent AI Directory</span>
-            <span className="w-1 h-1 rounded-full bg-emerald-500/60" />
-            <ThinkingOrb state="breathing" size={20} theme="dark" className="drop-shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
           </div>
         </motion.div>
 
@@ -49,8 +46,8 @@ export default function HeroSearch({
           </span>
         </h1>
 
-        <p className="text-zinc-400 text-base sm:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
-          Stop searching endlessly across generic lists. Describe what you want to build or automate, and our platform will construct the exact stack of tools you need.
+        <p className="text-zinc-400 text-base sm:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed font-medium">
+          Describe what you want to build or automate to find the exact tools you need.
         </p>
       </div>
 
@@ -83,10 +80,9 @@ export default function HeroSearch({
 
       {/* Discovery Prompt Tags */}
       <div className="w-full max-w-3xl flex flex-col items-center">
-        <div className="flex items-center gap-2 mb-3 text-xs text-zinc-400 font-bold uppercase tracking-wider">
-          <ThinkingOrb state="connecting" size={20} theme="dark" className="drop-shadow-[0_0_6px_rgba(52,211,153,0.7)]" />
-          <span>Popular Searches</span>
-        </div>
+        <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider mb-3">
+          Popular Searches
+        </span>
         <div className="flex flex-wrap justify-center gap-2">
           {DISCOVERY_TAGS.map((tag, idx) => (
             <button

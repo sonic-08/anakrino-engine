@@ -456,40 +456,12 @@ export default function App() {
               {/* Grid Content */}
               {loading ? (
                 <div className="flex flex-col gap-8 w-full">
-                  {/* Thinking Orb Agent Inference Banner */}
-                  <motion.div
-                    initial={{ opacity: 0, y: -15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full bg-gradient-to-r from-emerald-950/40 via-[#07170e]/80 to-black/60 border border-emerald-500/25 rounded-[2.5rem] p-6 sm:p-8 backdrop-blur-3xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.6),0_0_30px_rgba(16,185,129,0.12)] relative overflow-hidden"
-                  >
-                    <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 blur-[90px] pointer-events-none rounded-full" />
-                    
-                    <div className="flex items-center gap-5 z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.25)] overflow-hidden">
-                        <ThinkingOrb state="searching" size={64} theme="dark" className="drop-shadow-[0_0_12px_rgba(52,211,153,0.9)] scale-90" />
-                      </div>
-                      <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[0.68rem] font-extrabold uppercase tracking-widest mb-1.5 shadow-sm">
-                          <ThinkingOrb state="connecting" size={20} theme="dark" />
-                          <span>AI Agent Inference</span>
-                        </div>
-                        <h3 className="font-heading text-lg sm:text-xl font-bold text-white">
-                          Synthesizing Best AI Stack for: &ldquo;{query || 'Your Workflow'}&rdquo;
-                        </h3>
-                        <p className="text-xs sm:text-sm text-zinc-400 mt-0.5">
-                          Querying live models, extracting pricing tiers, capabilities & verified community feedback...
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2.5 z-10 shrink-0">
-                      <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-black/60 border border-emerald-500/30 text-xs font-mono text-emerald-300 shadow-inner">
-                        <ThinkingOrb state="solving" size={20} theme="dark" />
-                        <span>Live Verification</span>
-                      </div>
-                    </div>
-                  </motion.div>
+                  <div className="flex items-center justify-center gap-3 py-6">
+                    <ThinkingOrb state="searching" size={20} theme="dark" className="drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                    <span className="text-sm font-semibold text-zinc-300">
+                      Finding tools for &ldquo;{query || 'your search'}&rdquo;...
+                    </span>
+                  </div>
 
                   <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                     {[...Array(6)].map((_, i) => (

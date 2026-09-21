@@ -85,8 +85,8 @@ export default function CopilotDrawer({
                     Anakrino Copilot
                   </span>
                   <span className="text-[0.7rem] text-emerald-400 font-bold flex items-center gap-1.5 mt-0.5">
-                    <ThinkingOrb state="breathing" size={20} theme="dark" className="drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-                    Live Web-Grounding Active
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    AI Assistant Active
                   </span>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function CopilotDrawer({
                   <div className="bg-emerald-950/40 border border-emerald-500/25 rounded-2xl rounded-bl-sm px-4 py-3 text-xs text-zinc-300 flex items-center gap-3 backdrop-blur-xl shadow-[0_0_20px_rgba(16,185,129,0.15)]">
                     <ThinkingOrb state="searching" size={20} theme="dark" className="drop-shadow-[0_0_8px_rgba(52,211,153,0.9)]" />
                     <span className="text-xs font-semibold text-emerald-200">
-                      Searching web & analyzing AI platforms...
+                      Thinking...
                     </span>
                   </div>
                 </motion.div>
