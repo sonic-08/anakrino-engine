@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Search, ChevronRight, Sparkles } from 'lucide-react';
+import { Search, ChevronRight } from 'lucide-react';
+import { ThinkingOrb } from 'thinking-orbs';
 import Button3D from './Button3D';
 
 const DISCOVERY_TAGS = [
@@ -36,6 +37,8 @@ export default function HeroSearch({
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
             <img src="/logo.png" alt="Anakrino" className="h-4 sm:h-4.5 w-auto object-contain filter drop-shadow-[0_0_6px_rgba(16,185,129,0.8)] select-none" />
             <span>The Intelligent AI Directory</span>
+            <span className="w-1 h-1 rounded-full bg-emerald-500/60" />
+            <ThinkingOrb state="breathing" size={20} theme="dark" className="drop-shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
           </div>
         </motion.div>
 
@@ -80,8 +83,8 @@ export default function HeroSearch({
 
       {/* Discovery Prompt Tags */}
       <div className="w-full max-w-3xl flex flex-col items-center">
-        <div className="flex items-center gap-2 mb-3 text-xs text-zinc-500 font-bold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+        <div className="flex items-center gap-2 mb-3 text-xs text-zinc-400 font-bold uppercase tracking-wider">
+          <ThinkingOrb state="connecting" size={20} theme="dark" className="drop-shadow-[0_0_6px_rgba(52,211,153,0.7)]" />
           <span>Popular Searches</span>
         </div>
         <div className="flex flex-wrap justify-center gap-2">

@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, X, Send, RotateCcw, MessageSquare } from 'lucide-react';
+import { ThinkingOrb } from 'thinking-orbs';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -84,7 +85,7 @@ export default function CopilotDrawer({
                     Anakrino Copilot
                   </span>
                   <span className="text-[0.7rem] text-emerald-400 font-bold flex items-center gap-1.5 mt-0.5">
-                    <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
+                    <ThinkingOrb state="breathing" size={20} theme="dark" className="drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
                     Live Web-Grounding Active
                   </span>
                 </div>
@@ -180,32 +181,18 @@ export default function CopilotDrawer({
 
               {loading && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="flex justify-start items-center gap-2"
                 >
                   <div className="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                     <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                   </div>
-                  <div className="bg-white/[0.05] border border-white/10 rounded-2xl rounded-bl-sm px-4 py-3 text-xs text-zinc-400 flex items-center gap-2">
-                    <span className="flex gap-1">
-                      <motion.span
-                        animate={{ y: [0, -3, 0] }}
-                        transition={{ repeat: Infinity, duration: 0.6, delay: 0 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
-                      />
-                      <motion.span
-                        animate={{ y: [0, -3, 0] }}
-                        transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
-                      />
-                      <motion.span
-                        animate={{ y: [0, -3, 0] }}
-                        transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }}
-                        className="w-1.5 h-1.5 bg-emerald-400 rounded-full"
-                      />
+                  <div className="bg-emerald-950/40 border border-emerald-500/25 rounded-2xl rounded-bl-sm px-4 py-3 text-xs text-zinc-300 flex items-center gap-3 backdrop-blur-xl shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+                    <ThinkingOrb state="searching" size={20} theme="dark" className="drop-shadow-[0_0_8px_rgba(52,211,153,0.9)]" />
+                    <span className="text-xs font-semibold text-emerald-200">
+                      Searching web & analyzing AI platforms...
                     </span>
-                    <span className="text-[0.75rem] font-medium text-zinc-400">Researching AI catalog...</span>
                   </div>
                 </motion.div>
               )}
